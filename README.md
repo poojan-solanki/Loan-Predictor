@@ -74,7 +74,7 @@ cd Loan-Predictor
      ```
 3. Install dependencies:
    ```bash
-   pip install .\loan-predictor-backend\requirments.txt
+   pip install -r .\loan-predictor-backend\requirments.txt
    ```
 4. Run the backend server:
    ```bash
