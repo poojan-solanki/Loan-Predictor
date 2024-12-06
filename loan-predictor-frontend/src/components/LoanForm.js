@@ -253,12 +253,22 @@ const LoanForm = () => {
       
       {prediction && (
         <div className={`mt-4 p-4 rounded ${
-          prediction.result === 'Low Risk' 
-            ? 'bg-green-100 border-green-400 text-green-700' 
-            : 'bg-red-100 border-red-400 text-red-700'
+          prediction.result < 0.4
+            ? 'bg-green-100 border-green-400 text-green-700'
+            : prediction.result > 0.6 
+              ? 'bg-red-100 border-red-400 text-red-700'
+              : 'bg-yellow-100 border-yellow-400 text-yellow-700'
         }`}>
           <h3 className="font-bold text-lg">Prediction Result</h3>
-          <p>Risk Level: {prediction.result}</p>
+          {/* <p>Risk Level: {prediction.result}</p> */}
+          <p>
+            {prediction.result < 0.4 
+              ? "Your loan will get approved"
+              : prediction.result > 0.6
+                ? "Your loan will not get approved" 
+                : "Your loan might get approved"
+            }
+          </p>
           <p>Probability: {(prediction.probability * 100).toFixed(2)}%</p>
         </div>
       )}

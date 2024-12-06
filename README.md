@@ -105,7 +105,7 @@ cd Loan-Predictor
 
 ## Usage
 
-1. Open the web application rinning on: [http://localhost:5000](http://localhost:5000).
+1. Open the web application rinning on: [http://localhost:3000](http://localhost:3000).
 2. Fill in the required loan application details.
 3. Submit the form to get loan eligibility predictions.
 
