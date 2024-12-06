@@ -58,7 +58,7 @@ def predict():
         print("Probability",probability)
         
         # Return result
-        result = "Low Risk" if prediction == 0 else "High Risk"
+        result = probability
         return jsonify({
             'result': result,
             'probability': float(probability)  # Convert numpy float to Python float
