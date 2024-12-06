@@ -78,6 +78,7 @@ cd Loan-Predictor
    ```
 4. Run the backend server:
    ```bash
+   cd .\loan-predictor-backend\backend\
    python .\loan-predictor-backend\backend\app.py
    ```
 
